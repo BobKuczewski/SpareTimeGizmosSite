@@ -6,3 +6,8 @@ The goal is to create a git repository that will reflect the original web site o
 
 [https://bobkuczewski.github.io/SpareTimeGizmosSite/index.htm](https://bobkuczewski.github.io/SpareTimeGizmosSite/index.htm)
 
+Here's an image of the home page as it currently appears:
+
+![SpareTimeGizmosSite Home Page](SpareTimeGizmosSite_GitHub.png)
+
+Note that there may still be many missing files. Please report any broken links to the [COSMAC ELF forum](https://groups.io/g/cosmacelf/topic/spare_time_gizmos_web_site/119082541).
