@@ -14,3 +14,8 @@ Note that there may still be many missing files. Please report any broken links 
 any of the following known missing files might be found:
 
 - Downloads/v60.zip
+- Downloads/SBC6120 Brochure.pdf
+- Downloads/SBC6120 Brochure (Europe).pdf
+- Downloads/ADVENT.ZIP
+- Downloads/FP6120 Brochure (Europe).pdf
+- Downloads/KY11.zip
