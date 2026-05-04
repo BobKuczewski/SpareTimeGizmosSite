@@ -1,0 +1,176 @@
+<html>
+
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Number Converter
+</title>
+
+<SCRIPT LANGUAGE = "JavaScript">
+
+function formatPhoneField()
+{
+// If it's a string resembling a phone number, formats it so
+var field = new String(frmPhone.txtPhone.value);
+var newField = new String();
+if (field.length == 7)
+  {
+  newField = field.substr(0,3) + "-" + field.substr(3,4);
+  }
+else
+  if (field.length == 10)
+    {
+    newField = "("+field.substr(0,3)+") ";
+    newField = newField + field.substr(3,3) + "-" + field.substr(6,4);
+    }
+  else
+  newField = field;
+frmPhone.txtPhone.value = newField;
+} // formatPhoneField
+
+function upCase()
+{
+// convert the text field to uppercase
+frmPhone.txtPhone.value = frmPhone.txtPhone.value.toUpperCase();
+formatPhoneField();
+} // upCase
+
+function convertChar(ch)
+{
+// If ch is a letter [A-Z]  converts it to corresponding digit.
+// Otherwise, returns the character unchanged.
+
+var digitsTable = new String (
+"22233344455566677778889999");
+var lettersTable = new String(
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+
+for (var i = 0; i < lettersTable.length; i++)
+  {
+  if (ch == lettersTable.charAt(i))
+    return digitsTable.charAt(i);
+  } // end for
+return ch;
+} // convertChar
+
+function convertPhone()
+{
+// Replaces the letters in the phone number with their corresponding digits.
+var number = new String (document.frmPhone.txtPhone.value);
+var convertedNumber = new String();
+var tempStr = new String(); // for debugging
+for (var i = 0; i < number.length; i++)
+  {
+  convertedNumber = convertedNumber + convertChar(number.charAt(i));
+  } // end for
+strTemp =
+"Your number " + number + "\ntranslates to " + convertedNumber;
+document.frmPhone.txtConvertedNumber.value  = convertedNumber;
+document.frmPhone.txtConvertedNumber.focus();
+} // convertPhone
+</SCRIPT>
+<meta name="Microsoft Theme" content="tp-sho01 011, default">
+<meta name="Microsoft Border" content="tb, default">
+</HEAD>
+
+<BODY background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<p align="right"><font size="6"><strong>
+<a href="http://www.sparetimegizmos.com">
+<img border="0" src="images/logo.gif" align="left" width="234" height="102"></a><img src="_derived/Number_Converter.htm_cmp_tp-sho01010_bnr.gif" width="456" height="60" border="0" alt="Number Converter"></strong></font><br>
+</p>
+
+<p align="right">
+<a href="index.htm"><img src="_derived/home_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Software" align="middle"></a> <a href="../index.htm"><img src="_derived/ext1009_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Home" align="middle"></a> <a href="../Hardware/index.htm"><img src="_derived/ext1008_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Hardware" align="middle"></a> <a href="../Download.htm"><img src="_derived/ext1011_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Download" align="middle"></a></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p><!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="arial, Arial, Helvetica">
+<FORM NAME="frmPhone">
+<P>
+Use this little JavaScript to convert telephone numbers with
+alphabetic characters into telephone numbers  containing
+only digits.&nbsp; For example, 452-LATE gets translated into 452-5283.&nbsp; All letters in the phone number are translated to
+their corresponding telephone dial or touchtone pad digits.
+<P>
+Speech users: fill in the first edit box with
+the phone number to translate.
+The second edit box will contain the result.&nbsp; Click the Translate button and the focus will automatically
+return to the second edit box so you can
+easily read the result.
+<p>&nbsp;
+<div align="center">
+  <center>
+<!--mstheme--></font><table border="1" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+</font><!--mstheme--></font><caption><!--mstheme--><font face="arial, Arial, Helvetica">
+<p align="center">
+Telephone Number Converter <!--mstheme--></font></caption><!--mstheme--><font face="arial, Arial, Helvetica">
+<tr>
+<th><!--mstheme--><font face="arial, Arial, Helvetica">
+  <p align="center">Phone Number
+<td><!--mstheme--><font face="arial, Arial, Helvetica">
+<p align="center">
+<INPUT
+  TYPE=TEXT
+  TAB="0"
+  NAME="txtPhone"
+  ONBLUR = "upCase();" size="20">
+<tr>
+<th><!--mstheme--><font face="arial, Arial, Helvetica"> 
+  <p align="center"> Converted to Digits
+<td><!--mstheme--><font face="arial, Arial, Helvetica">
+<p align="center">
+<INPUT
+  TYPE = TEXT
+  TAB="-1"
+  NAME= "txtConvertedNumber"
+  ONCLICK="document.frmPhone.txtPhone.focus();"
+  VALUE = "" size="20">
+</TABLE><!--mstheme--><font face="arial, Arial, Helvetica">
+  </center>
+</div>
+<p align="center">
+<INPUT
+  TYPE=BUTTON
+  TAB="2"
+  VALUE="Translate"
+  ONCLICK="convertPhone();">
+</FORM>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica"><!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
+<h3 align="center"><i>Visit these Spare Time Gizmos</i></h3>
+<p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/Calorie_Record.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/Calorie_Record.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Calorie_Record.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/Calorie_Record.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Calorie Record" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/WinEight.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/WinEight.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="WinEight.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/WinEight.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="WinEight" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/TU58_Driver.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/TU58_Driver.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="TU58_Driver.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/TU58_Driver.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="TU58 Driver" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/OptaView.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/OptaView.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="OptaView.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/OptaView.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="OptaView" align="middle" name="MSFPnav4"></a> <img src="_derived/Number_Converter.htm_cmp_tp-sho01010_hbtn_p.gif" width="155" height="24" border="0" alt="Number Converter" align="middle"> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/Call_Review.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/Call_Review.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Call_Review.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/Call_Review.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Call Review" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/Mail_Muncher.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/Mail_Muncher.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Mail_Muncher.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/Mail_Muncher.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Mail Muncher" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/TextRecorder.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/TextRecorder.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="TextRecorder.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/TextRecorder.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Text Recorder" align="middle" name="MSFPnav7"></a>
+</a></font></p>
+
+<p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
+<img border="0" src="images/Front_Page.gif" align="right" alt="[logo: created and managed with Microsoft Front Page 2000]" width="88" height="44"></a><a href="http://groups.yahoo.com/group/sparetimegizmos/join"><img border="0" src="images/JoinYahoo.gif" align="left" alt="Click to join the Spare Time Gizmos Yahoo! Group." width="91" height="52"></a>Copyright  2000-2006 by Spare Time Gizmos.&nbsp; All rights reserved.&nbsp;
+Last modified 
+July 31, 2006.<br>
+Send mail to <a href="mailto:webmaster@sparetimegizmos.com">webmaster@sparetimegizmos.com</a>
+with questions or comments about this web site.</font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+</html>

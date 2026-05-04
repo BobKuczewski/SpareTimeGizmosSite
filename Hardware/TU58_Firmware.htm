@@ -1,0 +1,237 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>TU58 EMULATOR FIRMWARE V1</title>
+<meta name="Microsoft Theme" content="tp-sho01 011, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<p align="right"><font size="6"><strong>
+<img border="0" src="images/logo.gif" align="left" width="234" height="102">TU58 EMULATOR FIRMWARE V1</strong></font></p>
+
+<p align="right">
+<a href="index.htm"><img src="_derived/home_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Hardware" align="middle"></a> <a href="../index.htm"><img src="_derived/ext1015_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Home" align="middle"></a> <a href="../Software/index.htm"><img src="_derived/ext1014_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Software" align="middle"></a> <a href="../Download.htm"><img src="_derived/ext1017_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Download" align="middle"></a></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p><!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<h3>TU58 EMULATOR FIRMWARE V1.2 17-MAY-1996</h3>
+<p>Copyright (C) May 1996 Robert Armstrong, Milpitas CA <br>
+All rights reserved.</p>
+<h3>DESCRIPTION</h3>
+<p>This software is an emulator for a Digital Equipment TU58 DECtape
+II drive and runs on an 8051 based micro controller system specially
+designed for this application.  In addition to the 8051 MPU and a 
+serial interface, the hardware provides for up to 512K bytes of non-volatile
+battery backed up SRAM. This SRAM serves as the storage for
+one (256K) or two (512K) emulated TU58 tapes.  All normal RSP messages
+are supported, including MRSP and bootstrap, and the current
+version has been tested with VMS and RT11.</p>
+<h3>SWITCH SETTINGS</h3>
+<p>The TU58 emulator contains a four position DIP switch, of which the software
+assigns switches 1 and 2 to write protect one or both logical units:</p>
+<blockquote>
+  <blockquote>
+    <!--mstheme--></font><table border="1" width="50%" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+      <tr>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+          <h4>SW1</h4>
+        <!--mstheme--></font></td>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+          <h4>SW2</h4>
+        <!--mstheme--></font></td>
+        <td width="60%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">Open<!--mstheme--></font></td>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+        <td width="60%" align="left"><!--mstheme--><font face="arial, Arial, Helvetica">Write enable unit 0<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">Closed<!--mstheme--></font></td>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+        <td width="60%" align="left"><!--mstheme--><font face="arial, Arial, Helvetica">Write lock unit 0<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">Open<!--mstheme--></font></td>
+        <td width="60%" align="left"><!--mstheme--><font face="arial, Arial, Helvetica">Write enable unit 1<!--mstheme--></font></td>
+      </tr>
+      <tr>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+        <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">Closed<!--mstheme--></font></td>
+        <td width="60%" align="left"><!--mstheme--><font face="arial, Arial, Helvetica">Write lock unit 1<!--mstheme--></font></td>
+      </tr>
+    </table><!--mstheme--><font face="arial, Arial, Helvetica">
+  </blockquote>
+</blockquote>
+<p>
+Switches 3 and 4 are used to select the RSP/MRSP baud rate:
+<blockquote>
+  <blockquote>
+<!--mstheme--></font><table border="1" width="50%" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+  <tr>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>SW3</h4>
+    <!--mstheme--></font></td>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>SW4</h4>
+    <!--mstheme--></font></td>
+    <td align="center" width="50%"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>Baud</h4>
+    <!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Open<!--mstheme--></font></td>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Open<!--mstheme--></font></td>
+    <td align="center" width="50%"><!--mstheme--><font face="arial, Arial, Helvetica">4.8 kBps<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Open<!--mstheme--></font></td>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Closed<!--mstheme--></font></td>
+    <td align="center" width="50%"><!--mstheme--><font face="arial, Arial, Helvetica">9.6 kBps<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Closed<!--mstheme--></font></td>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Open<!--mstheme--></font></td>
+    <td align="center" width="50%"><!--mstheme--><font face="arial, Arial, Helvetica">19.2 kBps<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Closed<!--mstheme--></font></td>
+    <td align="center" width="25%"><!--mstheme--><font face="arial, Arial, Helvetica">Closed<!--mstheme--></font></td>
+    <td align="center" width="50%"><!--mstheme--><font face="arial, Arial, Helvetica">38.4 kBps<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="arial, Arial, Helvetica">
+  </blockquote>
+</blockquote>
+<h3>DIAGNOSTICS</h3>
+<p>The TU58 emulator contains two LEDs on the front of the board.&nbsp; These LEDs normally
+show
+drive activity in the same way as a real TU58, but immediately after power up these LEDs are used
+to show the results of the self test:</p>
+
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>LED 0</h4>
+    <!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>LED 1</h4>
+    <!--mstheme--></font></td>
+    <td width="60%"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+ on&nbsp;<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">    on&nbsp;<!--mstheme--></font></td>
+    <td width="60%"><!--mstheme--><font face="arial, Arial, Helvetica">	CPU, EPROM, HC373 or address/data bus failure<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+ on&nbsp;<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">blink (slow)<!--mstheme--></font></td>
+    <td width="60%"><!--mstheme--><font face="arial, Arial, Helvetica">  SRAM failure<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+ blink (fast)<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica"> blink (fast)<!--mstheme--></font></td>
+    <td width="60%"><!--mstheme--><font face="arial, Arial, Helvetica">  backup battery failure (*)<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">
+ off&nbsp;<!--mstheme--></font></td>
+    <td width="20%" align="center"><!--mstheme--><font face="arial, Arial, Helvetica">   off&nbsp;<!--mstheme--></font></td>
+    <td width="60%"><!--mstheme--><font face="arial, Arial, Helvetica">	self test pass&nbsp;<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="arial, Arial, Helvetica">
+<p>(*) This state is a "soft" error.  The drive will respond to the
+host and the LEDs will stop blinking and resume their normal drive
+activity indication as soon as RSP initialization is complete.</p>
+<h3> REVISION HISTORY</h3>
+<!--mstheme--></font><table border="1" width="100%" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+  <tr>
+    <td width="20%"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>When</h4>
+    <!--mstheme--></font></td>
+    <td width="10%"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>Who</h4>
+    <!--mstheme--></font></td>
+    <td width="70%"><!--mstheme--><font face="arial, Arial, Helvetica">
+      <h4>What</h4>
+    <!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%"><!--mstheme--><font face="arial, Arial, Helvetica"> 6-May-96<!--mstheme--></font></td>
+    <td width="10%"><!--mstheme--><font face="arial, Arial, Helvetica">	RLA&nbsp;<!--mstheme--></font></td>
+    <td width="70%"><!--mstheme--><font face="arial, Arial, Helvetica">	finish original implementation<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="20%"><!--mstheme--><font face="arial, Arial, Helvetica">
+ 17-May-96<!--mstheme--></font></td>
+    <td width="10%"><!--mstheme--><font face="arial, Arial, Helvetica">	RLA&nbsp;<!--mstheme--></font></td>
+    <td width="70%"><!--mstheme--><font face="arial, Arial, Helvetica">	add support for MRSP (needed for VMS and RSX!)<br>
+ zero fill writes which are not complete blocks<!--mstheme--></font></td>
+  </tr>
+</table><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica"><!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
+<h3 align="center"><i>Visit these Spare Time Gizmos</i></h3>
+<p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="AC_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="AC Frequency Monitor" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Stereo_6t9.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Stereo 6T9" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="KY11_Interface.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="KY11 Interface" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/Panda.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/Panda.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Panda.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/Panda.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Panda Display Panel" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Radiation_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Radiation Monitor" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/Life_Game.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/Life_Game.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Life_Game.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/Life_Game.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Life Game" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Elf2K.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="COSMAC Elf 2000" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="EPROM_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="EPROM Emulator" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="BASIC-52_Explorer.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="BASIC-52 Explorer" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="TU58_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="TU58 Emulator" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav11h=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Contest_Station.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Contest Station" align="middle" name="MSFPnav11"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav12h=MSFPpreload("_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Tactile_VU_Meter.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Tactile VU Meter" align="middle" name="MSFPnav12"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav13n=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav13h=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SBC6120-2.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13h.src" onmouseout="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13n.src"><img src="_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="SBC6120" align="middle" name="MSFPnav13"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav14n=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav14h=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SoundBuddy.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14h.src" onmouseout="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14n.src"><img src="_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Sound Card Buddy" align="middle" name="MSFPnav14"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav15n=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav15h=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="MP3_Player.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15h.src" onmouseout="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15n.src"><img src="_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="MP3 Player" align="middle" name="MSFPnav15"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav16n=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav16h=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="VT.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav16'].src=MSFPnav16h.src" onmouseout="if(MSFPhover) document['MSFPnav16'].src=MSFPnav16n.src"><img src="_derived/VT.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Video Terminal" align="middle" name="MSFPnav16"></a>
+</a></font></p>
+
+<p align="center"><font size="1">
+<a href="http://groups.yahoo.com/group/sparetimegizmos/join">
+<img border="0" src="images/JoinYahoo.gif" align="left" alt="Click to join the Spare Time Gizmos Yahoo! Group." width="91" height="52"></a><a href="http://www.microsoft.com/frontpage/"><img border="0" src="images/Front_Page.gif" align="right" alt="[logo: created and managed with Microsoft Front Page 2000]" width="88" height="44"></a>Copyright  2000-2006 by Spare Time Gizmos.&nbsp; All rights reserved.&nbsp;
+Last modified 
+October 05, 2011.<br>
+Send mail to <a href="mailto:webmaster@sparetimegizmos.com">webmaster@sparetimegizmos.com</a>
+with questions or comments about this web site.</font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+
+</html>

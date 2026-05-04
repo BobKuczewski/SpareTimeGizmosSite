@@ -1,0 +1,200 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Panda Display Panel</title>
+<meta name="Microsoft Theme" content="tp-sho01 011, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<p align="right"><font size="6"><strong>
+<img border="0" src="images/logo.gif" align="left" width="234" height="102">Panda Display Panel</strong></font></p>
+
+<p align="right">
+<a href="index.htm"><img src="_derived/home_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Hardware" align="middle"></a> <a href="../index.htm"><img src="_derived/ext1015_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Home" align="middle"></a> <a href="../Software/index.htm"><img src="_derived/ext1014_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Software" align="middle"></a> <a href="../Download.htm"><img src="_derived/ext1017_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Download" align="middle"></a></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p><!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<h3><b><font size="4">
+<a href="#Build Your Own">Build or Buy Your Own</a><br>
+</font><font size="4"><a href="#Ordering">Ordering</a></font></b><br>
+<a href="Panda_Assembly_Hints.htm">Assembly Hints</a></h3>
+
+<p align="center"><img border="0" src="images/PandaPanel.gif" width="561" height="168"></p>
+<p>Once upon a time, Ken Harrenstein wrote a an emulator for the DEC KS10 and 
+KL10 processors, along with the associated peripherals.&nbsp; As an ex-36 bit 
+programmer (See <i><a href="http://www.sonic.net/gizmos/Computers/JFCL.htm">What 
+is JFCL, anyway?</a></i>) I can tell you that this was no small task, 
+and we're fortunate that Ken was kind enough to share his emulator, KLH10, with 
+the world.&nbsp; Mark Crispin got TOPS20 running on KLH10, and put it together 
+with a small Linux kernel on a bootable CD, which is available to any interested 
+hobbyist.&nbsp; To this day Mark maintains a pseudo<a href="http://panda.com/tops-20">-DECSYSTEM-20 running on PC 
+hardware</a>.</p>
+<p>The only problem with KLH10 and a PC is that it lacks the lights and switches 
+of the original hardware.&nbsp; Well, admittedly the KL and KS10 processors had 
+no lights and switches, but the KI and KA models did, and you'll just have to 
+use your imagination.&nbsp; In any case, after Mark bought one of the Spare Time 
+Gizmos <a href="SBC6120-2.htm">PDP-8 replicas</a>,&nbsp; he approached me about the possibility of creating 
+a pseudo front panel for KLH10.&nbsp; A realistic replica of a KI or KA panel 
+was financially, mechanically and physically beyond our means , but a simple 
+blinking LEDs panel was easy to do.</p>
+<p>The result was the Panda Display Panel that you see here.&nbsp; The Panda 
+display contains 40 LEDs (because LED bars are sold in multiples of 8, not 6!) 
+and four discrete status LEDs.&nbsp; In Mark's modified version of KLH10, 36 of 
+the 40 LEDs emulate a KI style lights register and three of the remaining LEDs 
+indicate processor load.&nbsp; The four discrete LEDs are used to indicate 
+virtual Disk, Tape, and Network activity as well as the simulated processor run 
+state.</p>
+<p>The Panda Display Panel is designed to replace a blank cover over a
+standard 5 1/4&quot; drive bay. The Panda Display receives power thru a standard
+floppy/hard disk drive power cable and the Panda Display plugs into a standard
+parallel (aka LPT) port for control and data. The display logic uses eight
+standard 74HC series ICs along with one 16V8 GAL and occupies two small
+PC boards. The two PC boards are designed to stack together, back to back,
+and the entire assembly pretty much fits inside a blank cover for a 5 1/4&quot;
+drive bay. If you're really into blinking lights, it is possible to daisy
+chain as many as four Panda Displays on the same parallel port. Each display
+is individually selectable by a unique two bit address.</p>
+<h2>  <a name="Build Your Own">Build 
+or Buy Your Own</a></h2>
+<p><a href="images/Lingling.jpg">
+<img border="0" src="images/Lingling_small.jpg" xthumbnail-orig-image="images/Lingling.jpg" align="left" alt="Mark Crispin's &quot;DECSYSTEM-20&quot; box, lingling" width="111" height="250"></a>The schematic and parts list for the Panda Display Panel are available
+free from Spare Time Gizmos. All of the parts are readily available from
+mail order sources source as <a href="http://www.mouser.com/">Mouser</a>, 
+<a href="http://www.digikey.com/">Digi-Key</a> and
+<a href="http://www.jameco.com">Jameco</a>, and it's fairly
+easy to assemble for anyone who has experience building small electronic
+gizmos. If you have a small, 25W soldering pencil or (better yet) a
+temperature controlled soldering station and you're comfortable reading
+a schematic and using it to stuff parts in a PC board then you probably
+won't have any trouble with assembly. </p>
+<p>If you decide to build your own, Spare Time Gizmos can sell you a set of
+bare PC boards to make your life easier and we can also sell you a pre-programmed GAL. All the other parts can be ordered from
+the sources given in the parts list and you should have no trouble obtaining
+them. This is a low volume kit for use and we're sorry to say that we just
+don't have the resources to provide a complete instruction or assembly
+manual, and the <a href="../Downloads/Panda.pdf">schematics</a>,
+<a href="../Downloads/Panda_Parts_List.pdf">parts list</a> and a few
+<a href="Panda_Assembly_Hints.htm">assembly hints</a> are all the documentation you'll
+get. Please download and read these documents and be sure you're comfortable
+with that before ordering parts. </p>
+<p>If you don't feel comfortable building your own, then Spare Time Gizmos
+will sell you a completely assembled and tested unit, ready to install in
+your PC.
+</p>
+<h2><a name="Ordering">Ordering</a></h2>
+<p>Please read the Spare Time Gizmos <a href="../Store%20Policies.htm">store 
+policies</a> before ordering.&nbsp; Shipping charges shown are <b><i>for the US</i></b> 
+only - international customers please
+<a href="mailto:orders@sparetimegizmos.com?subject=[FORM] Shipping charge inquiry for Panda DIsplay">inquire</a> before ordering.&nbsp; Sales tax must be charged on all shipments to 
+California addresses.</p>
+<p align="right">
+
+<!--mstheme--></font><table border="2" cellspacing="1" width="100%" id="AutoNumber3" height="1" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+  <tr>
+    <td width="16%" height="35"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4"><b>P/N</b></font><!--mstheme--></font></td>
+    <td width="66%" height="35"><!--mstheme--><font face="arial, Arial, Helvetica"><u><b><font size="4">Description</font></b></u><!--mstheme--></font></td>
+    <td width="7%" align="right" height="35"><!--mstheme--><font face="arial, Arial, Helvetica"><b>Price<font size="4"><br>
+    </font></b><font size="2">(S&amp;H)</font><!--mstheme--></font></td>
+    <td width="11%" height="35"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="32"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+    <td width="66%" height="32"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4"><b>Panda Display</b></font>
+    <a href="../Downloads/Panda.pdf">Schematics</a>,
+    <a href="../Downloads/Panda_Parts_List.pdf">Parts List</a> and
+    <a href="../Downloads/Panda.jed">Firmware</a> <!--mstheme--></font></td>
+    <td width="7%" align="right" height="32"><!--mstheme--><font face="arial, Arial, Helvetica"><b><font size="2">FREE!</font></b><!--mstheme--></font></td>
+    <td width="11%" height="32"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="1"><!--mstheme--><font face="arial, Arial, Helvetica"><b>PANDA-1B</b><!--mstheme--></font></td>
+    <td width="66%" height="1"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4"><b>Panda Display PC Boards Only</b></font><b><font size="4"><br>
+    </font></b><i><font size="2">Set of two - logic and display - PC boards.</font></i><!--mstheme--></font></td>
+    <td width="7%" align="right" height="1"><!--mstheme--><font face="arial, Arial, Helvetica"><!--mstheme--></font></td>
+    <td width="11%" height="1"><!--mstheme--><font face="arial, Arial, Helvetica"><!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="52"><!--mstheme--><font face="arial, Arial, Helvetica"><b>PANDA-GAL</b><!--mstheme--></font></td>
+    <td width="66%" height="52"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4"><b>Preprogrammed 16V8 GAL for the 
+    Panda Display</b><br>
+    </font><font size="2"><i>Available only with the purchase of a PC board.</i></font><!--mstheme--></font></td>
+    <td width="7%" align="right" height="52"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+    <td width="11%" height="52"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="37"><!--mstheme--><font face="arial, Arial, Helvetica"><b>PANDA-ASM</b><!--mstheme--></font></td>
+    <td width="66%" height="37"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4">Assembled and Tested Panda 
+    Display<br>
+    </font><i><font size="2">Ready to install in your PC.</font></i><!--mstheme--></font></td>
+    <td width="7%" align="right" height="37"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+    <td width="11%" height="22"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  </table><!--mstheme--><font face="arial, Arial, Helvetica">
+
+
+<center><p>
+<img src="http://counters.honesty.com/cgi-bin/honesty-counter.cgi?df=gen.18368437.00004"><br>
+<font size="-1">Free counters provided by <a href="http://www.andale.com">Andale</a>.<br>
+</font></p></center>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica"><!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
+<h3 align="center"><i>Visit these Spare Time Gizmos</i></h3>
+<p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="AC_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="AC Frequency Monitor" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Stereo_6t9.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Stereo 6T9" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="KY11_Interface.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="KY11 Interface" align="middle" name="MSFPnav3"></a> <img src="_derived/Panda.htm_cmp_tp-sho01010_hbtn_p.gif" width="155" height="24" border="0" alt="Panda Display Panel" align="middle"> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Radiation_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Radiation Monitor" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/Life_Game.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/Life_Game.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Life_Game.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/Life_Game.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Life Game" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Elf2K.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="COSMAC Elf 2000" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="EPROM_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="EPROM Emulator" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="BASIC-52_Explorer.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="BASIC-52 Explorer" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="TU58_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="TU58 Emulator" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Contest_Station.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Contest Station" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav11h=MSFPpreload("_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Tactile_VU_Meter.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Tactile VU Meter" align="middle" name="MSFPnav11"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav12h=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SBC6120-2.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="SBC6120" align="middle" name="MSFPnav12"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav13n=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav13h=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SoundBuddy.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13h.src" onmouseout="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13n.src"><img src="_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Sound Card Buddy" align="middle" name="MSFPnav13"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav14n=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav14h=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="MP3_Player.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14h.src" onmouseout="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14n.src"><img src="_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="MP3 Player" align="middle" name="MSFPnav14"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav15n=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav15h=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="VT.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15h.src" onmouseout="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15n.src"><img src="_derived/VT.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Video Terminal" align="middle" name="MSFPnav15"></a>
+</a></font></p>
+
+<p align="center"><font size="1">
+<a href="http://groups.yahoo.com/group/sparetimegizmos/join">
+<img border="0" src="images/JoinYahoo.gif" align="left" alt="Click to join the Spare Time Gizmos Yahoo! Group." width="91" height="52"></a><a href="http://www.microsoft.com/frontpage/"><img border="0" src="images/Front_Page.gif" align="right" alt="[logo: created and managed with Microsoft Front Page 2000]" width="88" height="44"></a>Copyright  2000-2006 by Spare Time Gizmos.&nbsp; All rights reserved.&nbsp;
+Last modified 
+October 05, 2011.<br>
+Send mail to <a href="mailto:webmaster@sparetimegizmos.com">webmaster@sparetimegizmos.com</a>
+with questions or comments about this web site.</font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+
+</html>

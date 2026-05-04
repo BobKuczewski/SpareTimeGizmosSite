@@ -1,0 +1,116 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+
+
+<title>Tactile VU Meter</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Microsoft Theme" content="tp-sho01 011, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7"  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<p align="right"><font size="6"><strong>
+<img border="0" src="images/logo.gif" align="left" width="234" height="102">Tactile VU Meter</strong></font></p>
+
+<p align="right">
+<a href="index.htm"><img src="_derived/home_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Hardware" align="middle"></a> <a href="../index.htm"><img src="_derived/ext1015_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Home" align="middle"></a> <a href="../Software/index.htm"><img src="_derived/ext1014_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Software" align="middle"></a> <a href="../Download.htm"><img src="_derived/ext1017_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Download" align="middle"></a></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p><!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="arial, Arial, Helvetica">
+
+
+
+
+
+
+
+      <p> <img border="1" src="images/VU_Meter.jpg" align="right" alt="[photo: the VU meter with its cover removed and shown next to a standard cassette tape for scale]" hspace="10" vspace="10" width="282" height="244">Blind
+      individuals are frequently employed in the radio broadcasting or recording
+      fields, and even those who are not often want to use a tape recorder as
+      part of a home stereo system. Unfortunately conventional VU meters, both
+      analog and digital, are completely inaccessible to those without sight.
+      There have been attempts to make accessible VU meters using various
+      audible indicators, but in a recording environment audible indicators have
+      never been practical.</p>
+
+
+      <p>Pagers have long used small motors, about 1&quot; long and the diameter
+      of pencil, with an eccentric weight mounted to the shaft as vibrators. The
+      motivation for this project was the idea to use one of these pager motors
+      as an annunciator in a tactile VU meter and, to be completely fair, this
+      idea originated with Bill Geary at the Smith-Kettlewell Eye Institute in
+      San Francisco.</p>
+      <p>The rest is simple. Half of a dual opamp is used as a buffer and signal
+      conditioner for the audio, and the second half as a comparator. When the
+      audio signal exceeds the comparator's threshold the vibrator motor is
+      triggered. The gain of the buffer stage is adjustable via a small trimmer
+      pot and is used to calibrate the VU meter so that the motor triggers at
+      approximately 0 VU. The entire thing is powered by a 9V battery and fits
+      into a box about the size of a pack of cigarettes.</p>
+      <p>Best of all, no software (and in fact, no microprocessor) is required!</p>
+      <p>The most difficult problem in this project was finding a suitable
+      enclosure that could be carried in a shirt pocket. Fortunately PacTec
+      makes a small one that was almost right and, after designing a custom PC
+      board to fit this enclosure, a little plastic work is all that's needed to
+      make a perfect fit.</p>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica"><!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
+<h3 align="center"><i>Visit these Spare Time Gizmos</i></h3>
+<p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="AC_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="AC Frequency Monitor" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Stereo_6t9.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Stereo 6T9" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="KY11_Interface.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="KY11 Interface" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/Panda.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/Panda.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Panda.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/Panda.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Panda Display Panel" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Radiation_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Radiation Monitor" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/Life_Game.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/Life_Game.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Life_Game.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/Life_Game.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Life Game" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Elf2K.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="COSMAC Elf 2000" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="EPROM_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="EPROM Emulator" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="BASIC-52_Explorer.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="BASIC-52 Explorer" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="TU58_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="TU58 Emulator" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav11h=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Contest_Station.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Contest Station" align="middle" name="MSFPnav11"></a> <img src="_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn_p.gif" width="155" height="24" border="0" alt="Tactile VU Meter" align="middle"> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav12h=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SBC6120-2.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="SBC6120" align="middle" name="MSFPnav12"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav13n=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav13h=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SoundBuddy.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13h.src" onmouseout="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13n.src"><img src="_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Sound Card Buddy" align="middle" name="MSFPnav13"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav14n=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav14h=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="MP3_Player.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14h.src" onmouseout="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14n.src"><img src="_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="MP3 Player" align="middle" name="MSFPnav14"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav15n=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav15h=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="VT.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15h.src" onmouseout="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15n.src"><img src="_derived/VT.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Video Terminal" align="middle" name="MSFPnav15"></a>
+</a></font></p>
+
+<p align="center"><font size="1">
+<a href="http://groups.yahoo.com/group/sparetimegizmos/join">
+<img border="0" src="images/JoinYahoo.gif" align="left" alt="Click to join the Spare Time Gizmos Yahoo! Group." width="91" height="52"></a><a href="http://www.microsoft.com/frontpage/"><img border="0" src="images/Front_Page.gif" align="right" alt="[logo: created and managed with Microsoft Front Page 2000]" width="88" height="44"></a>Copyright  2000-2006 by Spare Time Gizmos.&nbsp; All rights reserved.&nbsp;
+Last modified 
+October 05, 2011.<br>
+Send mail to <a href="mailto:webmaster@sparetimegizmos.com">webmaster@sparetimegizmos.com</a>
+with questions or comments about this web site.</font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+</html>

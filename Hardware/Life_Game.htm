@@ -1,0 +1,250 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+
+
+<title>Life Game</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta name="Microsoft Theme" content="tp-sho01 011, default">
+<meta name="Microsoft Border" content="tb, default">
+</head>
+
+<body background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7"  ><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<p align="right"><font size="6"><strong>
+<img border="0" src="images/logo.gif" align="left" width="234" height="102">Life Game</strong></font></p>
+
+<p align="right">
+<a href="index.htm"><img src="_derived/home_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Hardware" align="middle"></a> <a href="../index.htm"><img src="_derived/ext1015_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Home" align="middle"></a> <a href="../Software/index.htm"><img src="_derived/ext1014_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Software" align="middle"></a> <a href="../Download.htm"><img src="_derived/ext1017_cmp_tp-sho01010_gbtn.gif" width="80" height="18" border="0" alt="Download" align="middle"></a></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p><!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top"><!--mstheme--><font face="arial, Arial, Helvetica">
+
+<h1 align="center" style="margin-top: 0; margin-bottom: 0"><font size="5">Read all about the 
+Life Game in <a href="http://www.circuitcellar.com/magazine/">Circuit Cellar Ink</a> Magazine!!</font></h1>
+
+<p align="center" style="margin-top: 0; margin-bottom: 0"><i><font size="4">A 
+two part feature in the December 2004 and January 2005 issues!</font></i></p>
+
+<p align="center" style="margin-top: 0; margin-bottom: 0"><font size="4"><i>
+<a href="../Downloads/Life.pdf">Download the original manuscript for this 
+article.</a></i></font></p>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
+<h1 align="center"><i><font size="5"><a href="#Ordering">Buy parts and kits for your own Life Game!</a></font></i></h1>
+<!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p><p>
+<img border="2" src="images/LIFE2_small.jpg" xthumbnail-orig-image="images/LIFE2.tif" align="right" width="500" height="450">The
+idea for this project began when I saw a screen saver on the Sun-2 (yes, that
+was a long time ago!) that played John Conway's Game of Life using little
+pictures of the Sun logo. John Conway, if you haven't heard of him, did a lot of 
+thinking in the late 1960s about John von Neuman's earlier work on self 
+replicating&nbsp;&nbsp;&nbsp;&nbsp; cellular automata.&nbsp;&nbsp; Conway elegantly simplified von Neuman's forty plus rule automata into one with only three rules, and in 1970 
+Martin Gardner wrote a piece on Conway in his <i>Mathematical Games</i> column 
+in <i>Scientific American</i> magazine (October 1970, pp 120-123).</p>
+
+
+<p>Amazingly (although this was 1970, remember!) , Gardner describes how to play Life using a checker 
+board.&nbsp; It didn't 
+take long before somebody got the idea to use a computer, though, and the rest is history.&nbsp; Zillions 
+of computer hours have been squandered on Life simulations, and countless 
+beautiful patterns that grow, change and evolve over time have been discovered 
+since then.&nbsp; </p>
+
+
+<p>My idea was to build a visual Life game that could hang on the wall, like any
+other work of art, but in this case the art would constantly change. The display is a 16x16
+array of LEDs - rather small for LIFE, but 256 LEDs is a lot&nbsp; to solder!&nbsp; The CPU is an Intel 8051 class 
+microprocessor with flash memory, and four Maxim MAX7219 
+chips drive the LED matrix.&nbsp; Since the device was to hang on
+the wall and the owner has no convenient way to push buttons or flip switches on the
+device itself, and I decided to use a conventional infrared remote control for
+input.&nbsp; The entire project appeared as a two part feature article in
+<a href="http://www.circuitcellar.com/magazine/">Circuit Cellar Ink</a> 
+magazine, issues #173 (December 2004) and #174 (January 2005).&nbsp; You can 
+purchase reprints of these articles online from the Circuit Cellar Ink
+<a href="http://www.circuitcellar.com/magazine/">web page</a>, or you may 
+download my <a href="../Downloads/Life.pdf">original manuscript</a> for the 
+article.&nbsp; </p>
+
+
+<h1>Errata</h1>
+
+
+<p>One error has been discovered in the original Circuit Cellar article - In 
+Figure 1 of the January 2005 segment, ground is shown as DB-9F pin 7 and DB-25F 
+pin 5.&nbsp; <b>Those pin numbers are reversed</b> - the DB-9F ground is pin 5 and the 
+DB-25F ground is pin 7.</p>
+
+
+<p>The current firmware has a bug which causes the <b>infrared receiver to fail 
+when a Philips microprocessor is used.</b>&nbsp; Everything else will work 
+correctly; only the the infrared fails.&nbsp; <i>This problem does not exist 
+with the Atmel microprocessors</i>.&nbsp; We're working on a software update 
+which will fix this problem.&nbsp;&nbsp; BTW, if you order or already ordered a 
+complete kit from Spare Time Gizmos, it always ships with the Atmel processor.</p>
+
+
+<p>There is one known error in revision C of the LIFE PC board - the <b>silk screen 
+outline for transistor Q1 is reversed</b>.&nbsp; The <i>correct</i> way to install 
+this transistor is with the flat side facing the LED array and the round side 
+facing the edge of the PC board.&nbsp; If you have trouble programming your 
+microprocessor then you might want to double check this transistor.</p>
+
+
+<p>There are several errors in the wiring of the RJ11 programming jack with <i>
+revision B</i> of the PC board, however this revision was only shipped to beta 
+testers and never to customers.&nbsp;&nbsp; Contact us if you have a revision B 
+board and we'll exchange it for a revision C.</p>
+
+
+<p>You can determine the revision of your PC board looking at the top 
+(component) side in the upper left corner (near the buzzer BZ1).&nbsp; You'll 
+see the letters &quot;LIFE-5x&quot; in the etch (copper), and the &quot;x&quot; is the revision 
+letter of your PC board.</p>
+<h2>  <a name="Firmware">Firmware</a></h2>
+<p>  
+<img border="0" src="images/LIFE5A%20PCB_small.jpg" xthumbnail-orig-image="images/LIFE5A PCB.jpg" align="left" width="398" height="400">One of the unique features of the Life Game is that the microprocessor used 
+is &quot;in system programmable&quot; (aka ISP).&nbsp; 
+Put simply, this means you can download firmware to the microprocessor without 
+even having to remove it from the PC board!&nbsp; In fact, in this particular 
+case you can download firmware directly from any RS-232 serial port on an 
+ordinary Windows PC or Linux box.&nbsp; <i>No special programmer hardware is 
+required!</i></p>
+<p>  Spare Time Gizmos and Dan Liddell, the original authors of the Life Game 
+code, have decided to release the Life Game source code for &quot;free&quot; under the 
+terms of the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU Public 
+License</a>.&nbsp; These are the same licensing terms used by many open source 
+projects, including Linux.&nbsp; The only special development tool you will need 
+is an 8051 cross assembler, and many are available for free on the Internet.&nbsp; </p>
+<p>  It is our hope that people will extend and share the firmware; we have lots 
+of ideas for features that could be added, and there's plenty of room left in 
+the microprocessor's ROM!</p>
+<h2>  <a name="Licensing">Licensing</a></h2>
+<p align="center">  <font color="#FFFF00"><i><b>All LIFE Game files on this web 
+page are 
+Copyrighted 2004 by Spare Time Gizmos</b></i>.</font></p>
+<p>
+All Life Game documentation files including, but not limited to, schematics and 
+my original manuscript for the Circuit Cellar article, are 
+released under the terms of the 
+GNU Free Documentation License. Permission is granted to copy, distribute and/or 
+modify these files under the terms of the 
+<a href="http://www.gnu.org/licenses/licenses.html#FDL">GNU Free Documentation License</a>, 
+Version 1.1 published by the Free Software Foundation; with no invariant 
+sections; with the front cover text &quot;Portions Copyright (C) 2004 by Spare 
+Time Gizmos&quot; and our URL, and with no back cover text.</p>
+<p align="center">
+<i><b>The Life Game article as it appears in Circuit Cellar magazine is the 
+property of that magazine and you must obtain their permission to copy, 
+distribute or modify it.</b></i></p>
+<p>The Life Game firmware is released under under the 
+terms of the <a href="http://www.gnu.org/licenses/licenses.html#GPL">GNU General Public License</a>. Permission is granted to copy, 
+distribute and/or modify these files under the terms of the GNU General Public 
+License as published by the Free Software Foundation, version 2.</p>
+<h2>  <a name="Build Your Own">Build 
+Your Own</a></h2>
+<p>  <a href="images/Led_Aligner.JPG">
+<img border="2" src="images/Led_Aligner_small.JPG" xthumbnail-orig-image="images/Led_Aligner.JPG" align="right" width="250" height="175"></a>You have all the information you need to build your own 
+Life Game from 
+scratch, but Spare Time Gizmos can make your life easier by selling you a 
+beautiful PC board that will make wiring a snap.&nbsp; We can also sell you a 
+professionally machined tool for installing and aligning the LEDs, and we hope 
+(if we can make arrangements with a friendly cabinet maker) to be able to sell 
+you a finished wooden picture frame.</p>
+<p>  There's a complete list of all the required parts in the article, including 
+sources and part numbers for the more unusual ones, but if you don't want to or 
+don't have time to do your own shopping, we'll be happy to sell you a complete 
+kit of all the electronic parts required.&nbsp; <i>Note that the complete kit 
+does not include the LED tool or a cabinet (but you can order those separately) 
+or the remote control.</i></p>
+<h2><a name="Ordering">Ordering</a></h2>
+<p>Please read the Spare Time Gizmos <a href="../Store%20Policies.htm">store 
+policies</a> before ordering.&nbsp; Shipping charges shown are <b><i>for the US</i></b> 
+only - international customers please
+<a href="mailto:orders@sparetimegizmos.com?subject=[FORM] Shipping charge inquiry for ELF 2000">inquire</a> before ordering.&nbsp; Sales tax must be charged on all shipments to 
+California addresses.</p>
+<p align="right">
+
+<!--mstheme--></font><table border="2" cellspacing="0" width="100%" id="AutoNumber3" style="border-collapse: collapse" cellpadding="0" height="118" bordercolordark="#666666" bordercolorlight="#CCCCCC">
+  <tr>
+    <td width="16%" height="35"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4"><b>P/N</b></font><!--mstheme--></font></td>
+    <td width="66%" height="35"><!--mstheme--><font face="arial, Arial, Helvetica"><u><b><font size="4">Description</font></b></u><!--mstheme--></font></td>
+    <td width="7%" align="right" height="35"><!--mstheme--><font face="arial, Arial, Helvetica"><b>Price<font size="4"><br>
+    </font></b><font size="2">(S&amp;H)</font><!--mstheme--></font></td>
+    <td width="7%" align="right" height="35"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  <tr>
+    <td width="16%" height="31"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+    <td width="66%" height="31"><!--mstheme--><font face="arial, Arial, Helvetica"><font size="4">Life Game 
+    <a href="../Downloads/life5c.pdf">Schematics</a> and 
+    <a href="../Downloads/life5a.zip">Firmware</a>
+    </font><!--mstheme--></font></td>
+    <td width="7%" align="right" height="31"><!--mstheme--><font face="arial, Arial, Helvetica">
+    <p align="center"><i><b>FREE!</b></i><!--mstheme--></font></td>
+    <td width="7%" align="right" height="31"><!--mstheme--><font face="arial, Arial, Helvetica">&nbsp;<!--mstheme--></font></td>
+  </tr>
+  </table><!--mstheme--><font face="arial, Arial, Helvetica">
+<p>&nbsp;</p>
+
+
+<center><img src=http://counters.honesty.com/cgi-bin/honesty-counter.cgi?df=gen.18368437.00000><br>
+<font size=-1>Free counters provided by 
+<a href=http://www.andale.com>Andale</a>.<br></font><BR></center><BR>
+
+<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica"><!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
+<h3 align="center"><i>Visit these Spare Time Gizmos</i></h3>
+<p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="AC_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="AC Frequency Monitor" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav2h=MSFPpreload("_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Stereo_6t9.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/Stereo_6t9.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Stereo 6T9" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav3h=MSFPpreload("_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="KY11_Interface.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/KY11_Interface.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="KY11 Interface" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/Panda.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav4h=MSFPpreload("_derived/Panda.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Panda.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/Panda.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Panda Display Panel" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav5h=MSFPpreload("_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Radiation_Monitor.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/Radiation_Monitor.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Radiation Monitor" align="middle" name="MSFPnav5"></a> <img src="_derived/Life_Game.htm_cmp_tp-sho01010_hbtn_p.gif" width="155" height="24" border="0" alt="Life Game" align="middle"> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav6h=MSFPpreload("_derived/Elf2K.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Elf2K.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/Elf2K.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="COSMAC Elf 2000" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav7h=MSFPpreload("_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="EPROM_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/EPROM_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="EPROM Emulator" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav8h=MSFPpreload("_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="BASIC-52_Explorer.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/BASIC-52_Explorer.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="BASIC-52 Explorer" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav9h=MSFPpreload("_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="TU58_Emulator.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/TU58_Emulator.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="TU58 Emulator" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav10h=MSFPpreload("_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Contest_Station.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/Contest_Station.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Contest Station" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload("_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav11h=MSFPpreload("_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="Tactile_VU_Meter.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/Tactile_VU_Meter.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Tactile VU Meter" align="middle" name="MSFPnav11"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav12h=MSFPpreload("_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SBC6120-2.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/SBC6120-2.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="SBC6120" align="middle" name="MSFPnav12"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav13n=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav13h=MSFPpreload("_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="SoundBuddy.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13h.src" onmouseout="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13n.src"><img src="_derived/SoundBuddy.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Sound Card Buddy" align="middle" name="MSFPnav13"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav14n=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav14h=MSFPpreload("_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="MP3_Player.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14h.src" onmouseout="if(MSFPhover) document['MSFPnav14'].src=MSFPnav14n.src"><img src="_derived/MP3_Player.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="MP3 Player" align="middle" name="MSFPnav14"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav15n=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav15h=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn_a.gif"); }
+// --></script><a href="VT.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15h.src" onmouseout="if(MSFPhover) document['MSFPnav15'].src=MSFPnav15n.src"><img src="_derived/VT.htm_cmp_tp-sho01010_hbtn.gif" width="155" height="24" border="0" alt="Video Terminal" align="middle" name="MSFPnav15"></a>
+</a></font></p>
+
+<p align="center"><font size="1">
+<a href="http://groups.yahoo.com/group/sparetimegizmos/join">
+<img border="0" src="images/JoinYahoo.gif" align="left" alt="Click to join the Spare Time Gizmos Yahoo! Group." width="91" height="52"></a><a href="http://www.microsoft.com/frontpage/"><img border="0" src="images/Front_Page.gif" align="right" alt="[logo: created and managed with Microsoft Front Page 2000]" width="88" height="44"></a>Copyright  2000-2006 by Spare Time Gizmos.&nbsp; All rights reserved.&nbsp;
+Last modified 
+October 05, 2011.<br>
+Send mail to <a href="mailto:webmaster@sparetimegizmos.com">webmaster@sparetimegizmos.com</a>
+with questions or comments about this web site.</font></p>
+
+<!--mstheme--></font></td></tr><!--msnavigation--></table></body>
+</html>
