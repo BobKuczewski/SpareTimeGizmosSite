@@ -10,7 +10,15 @@
 <meta name="Microsoft Border" content="tb, default">
 </head>
 
-<body background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
+<body background="_themes/tp-sho01/background.jpg" bgcolor="#000000" text="#FFFFFF" link="#FFF200" vlink="#C0C0C0" alink="#FFFCB7">
+
+
+<div id="ArchivalNotice" align="center">
+<b>This site is an archived version of SpareTimeGizmos.com</b><br/><br/>
+</div>
+
+
+<!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica">
 
 <p align="right"><font size="6"><strong>
 <img border="0" src="images/logo.gif" align="left" width="234" height="102">Sound Card Buddy</strong></font></p>
@@ -23,125 +31,125 @@
 Read the complete Spare Time Gizmos Sound Card Buddy Article</a></h3>
 
 <h2>Ham Radio and Digital Data</h2>
-<p>You've passed your FCC examination, bought yourself a Ham radio, and talked 
-to a few people on the air.&nbsp; Now, what else is that license good for?&nbsp; For one 
-thing, it is possible to use your radio for sending more than just voice.&nbsp; Hams 
-first started sending FAX (facsimile) and RTTY (radio teletype) messages decades 
-ago, and the use of &quot;digital modes&quot; by amateurs has been expanding ever since.&nbsp; 
-Today we have a variety of ways to send digital data, text messages, and images 
+<p>You've passed your FCC examination, bought yourself a Ham radio, and talked
+to a few people on the air.&nbsp; Now, what else is that license good for?&nbsp; For one
+thing, it is possible to use your radio for sending more than just voice.&nbsp; Hams
+first started sending FAX (facsimile) and RTTY (radio teletype) messages decades
+ago, and the use of &quot;digital modes&quot; by amateurs has been expanding ever since.&nbsp;
+Today we have a variety of ways to send digital data, text messages, and images
 over the airwaves.</p>
-<p>Before the ready availability of cheap computers, these modes required 
-expensive and specialized equipment. &nbsp;Today all you need is your radio and a PC 
-to operate in any of them.&nbsp; A simple interface connects your radio to your PC's 
-sound card and then specialized software, most of which is either free or 
-shareware, processes the audio to recover the original data.&nbsp; The same software 
-can generally create tones for transmitting data as well, enabling two way 
+<p>Before the ready availability of cheap computers, these modes required
+expensive and specialized equipment. &nbsp;Today all you need is your radio and a PC
+to operate in any of them.&nbsp; A simple interface connects your radio to your PC's
+sound card and then specialized software, most of which is either free or
+shareware, processes the audio to recover the original data.&nbsp; The same software
+can generally create tones for transmitting data as well, enabling two way
 communication.</p>
 <h2>What makes a good interface between your radio and PC?</h2>
 <p><a href="images/Sound%20Card%20Buddy.jpg">
-<img border="0" src="images/Sound%20Card%20Buddy_small.jpg" xthumbnail-orig-image="images/Sound Card Buddy.jpg" align="right" width="300" height="217"></a>It is possible to simply connect a patch cord between your radio's headphone 
-jack and your PC's sound card input.&nbsp; This will work to a degree, but it leaves 
-much to be desired.&nbsp; First, the signal levels don't match very well - this is 
-especially true if you true to connect your sound card's output to your radio's 
-microphone input!&nbsp; Improper signal levels cause distortion which will make the 
-data unreadable and, when transmitting, those excessive signal levels can cause 
+<img border="0" src="images/Sound%20Card%20Buddy_small.jpg" xthumbnail-orig-image="images/Sound Card Buddy.jpg" align="right" width="300" height="217"></a>It is possible to simply connect a patch cord between your radio's headphone
+jack and your PC's sound card input.&nbsp; This will work to a degree, but it leaves
+much to be desired.&nbsp; First, the signal levels don't match very well - this is
+especially true if you true to connect your sound card's output to your radio's
+microphone input!&nbsp; Improper signal levels cause distortion which will make the
+data unreadable and, when transmitting, those excessive signal levels can cause
 over modulation and spurious outputs that interfere with other Hams.</p>
-<p>Second, a patch cord doesn't provide any isolation between the radio and the 
-PC. Isolation is desirable to keep digital noise from the PC out of the radio 
-and to prevent ground loops.&nbsp; Ground loops occur because the radio is typically 
-grounded thru its antenna and the PC is grounded by the power cord, and spurious 
-currents can flow between these two grounds that add hum and noise to the 
+<p>Second, a patch cord doesn't provide any isolation between the radio and the
+PC. Isolation is desirable to keep digital noise from the PC out of the radio
+and to prevent ground loops.&nbsp; Ground loops occur because the radio is typically
+grounded thru its antenna and the PC is grounded by the power cord, and spurious
+currents can flow between these two grounds that add hum and noise to the
 audio.&nbsp; </p>
-<p>Lastly, a patch cord doesn't provide any way to turn on (or &quot;key&quot;) the 
-radio's transmitter.&nbsp; This isn't a problem as long as you only want to receive, 
-but the day will come when you want to transmit your own messages (you did take 
-that FCC test for a reason, after all!) and then you'll need something better.&nbsp; 
-Nearly all the sound card software expects to use a standard PC serial port (a 
-&quot;COM&quot; port) to key the transmitter, and you need a simple circuit to connect the 
+<p>Lastly, a patch cord doesn't provide any way to turn on (or &quot;key&quot;) the
+radio's transmitter.&nbsp; This isn't a problem as long as you only want to receive,
+but the day will come when you want to transmit your own messages (you did take
+that FCC test for a reason, after all!) and then you'll need something better.&nbsp;
+Nearly all the sound card software expects to use a standard PC serial port (a
+&quot;COM&quot; port) to key the transmitter, and you need a simple circuit to connect the
 two.</p>
 <h2>Buying or Building a Sound Card Interface</h2>
-<p>You can buy a ready made sound card interface from 
-several commercial sources, or you can find any number of plans for building one 
-on the Internet.&nbsp; If you do decide to buy or build one, keep these few pointers 
-in mind.&nbsp; First, be sure that the interface you get provides isolation for all 
-signal paths.&nbsp; There are several inexpensive interfaces that only provide 
-isolation for the radio's microphone input, and it does no good at all to 
-provide isolation here when you still have to connect an ordinary patch cord 
+<p>You can buy a ready made sound card interface from
+several commercial sources, or you can find any number of plans for building one
+on the Internet.&nbsp; If you do decide to buy or build one, keep these few pointers
+in mind.&nbsp; First, be sure that the interface you get provides isolation for all
+signal paths.&nbsp; There are several inexpensive interfaces that only provide
+isolation for the radio's microphone input, and it does no good at all to
+provide isolation here when you still have to connect an ordinary patch cord
 between the PC and the radio's earphone output!</p>
-<p>Also, there are some sound card interfaces that use a 
-VOX circuit to automatically key the transmitter whenever any sound is output 
-from the PC.&nbsp; This may seem attractive, and it saves a COM port, but leads to 
-all sorts of embarrassing situations where you accidentally transmit your 
-MSWindows boot up music, your &quot;You have mail!&quot; announcement, the &quot;error beep, 
-or worse!&nbsp; It's better to have positive control of the transmit function so that 
-you know the transmitter is keyed only when the software has actual data to 
+<p>Also, there are some sound card interfaces that use a
+VOX circuit to automatically key the transmitter whenever any sound is output
+from the PC.&nbsp; This may seem attractive, and it saves a COM port, but leads to
+all sorts of embarrassing situations where you accidentally transmit your
+MSWindows boot up music, your &quot;You have mail!&quot; announcement, the &quot;error beep,
+or worse!&nbsp; It's better to have positive control of the transmit function so that
+you know the transmitter is keyed only when the software has actual data to
 transmit.</p>
 <h2>The Sound Card Buddy</h2>
-<p>The Spare Time Gizmos Sound Buddy is about the simplest interface you can 
-build that solves all the problems just described.&nbsp; It provides complete 
-isolation between the PC and the radio; it provides adjustable level matching 
-for both the receive and transmit audio, and it provides a COM port interface to 
-key the transmitter.&nbsp; When youre reading the schematic, be sure to note the 
-difference between the audio ground and digital ground symbols  audio ground is 
-used on the radio side and digital on the PC side and the two are <i>never</i> 
+<p>The Spare Time Gizmos Sound Buddy is about the simplest interface you can
+build that solves all the problems just described.&nbsp; It provides complete
+isolation between the PC and the radio; it provides adjustable level matching
+for both the receive and transmit audio, and it provides a COM port interface to
+key the transmitter.&nbsp; When youre reading the schematic, be sure to note the
+difference between the audio ground and digital ground symbols  audio ground is
+used on the radio side and digital on the PC side and the two are <i>never</i>
 connected.&nbsp; </p>
 <p>You can download a reprint of a
 <a href="http://www.sparetimegizmos.com/Downloads/Sound%20Card%20Buddy.pdf">
-magazine article</a> that describes the Sound Card Buddy.&nbsp; This article 
-includes the complete schematic, a description of how the circuit operates, 
-construction hints, and a parts list.&nbsp; All  parts are readily available from common suppliers such as DigiKey, 
-Mouser and Radio Shack, and this circuit can be constructed on a piece of perf board using point to point 
-wiring.&nbsp; This particular enclosure shown in the photos is a 
+magazine article</a> that describes the Sound Card Buddy.&nbsp; This article
+includes the complete schematic, a description of how the circuit operates,
+construction hints, and a parts list.&nbsp; All  parts are readily available from common suppliers such as DigiKey,
+Mouser and Radio Shack, and this circuit can be constructed on a piece of perf board using point to point
+wiring.&nbsp; This particular enclosure shown in the photos is a
 Hammond 1455C802 (approximately 1 by 2  by 3 ).</p>
-<p>Most fairly modern mobile radios, including Kenwood, 
-Yaesu and ICOM rigs, already have a 6 pin mini DIN connector marked data or 
-TNC.&nbsp; If youre lucky enough to have a radio with one of these, then all you 
-need is to connect it directly to J4 using a 6 pin mini DIN patch cord.&nbsp; These 
-patch cords are readily available from your local computer store because theyre 
+<p>Most fairly modern mobile radios, including Kenwood,
+Yaesu and ICOM rigs, already have a 6 pin mini DIN connector marked data or
+TNC.&nbsp; If youre lucky enough to have a radio with one of these, then all you
+need is to connect it directly to J4 using a 6 pin mini DIN patch cord.&nbsp; These
+patch cords are readily available from your local computer store because theyre
 commonly used with PC keyboards and/or mice.</p>
 <h2>Software</h2>
 <p>The
-<a href="http://www.elcom.gr/sv2agw/inst.htm">AGW Packet Engine</a>, written by George Rossopoulos, SV2AGW, is free Windows 
-software for sending and receiving 9600, 1200 and 300 baud UHF, VHF and HF 
-packet.&nbsp;&nbsp; So far as I can tell, AGWPE is <i>the</i> defacto standard for hams 
-doing packet radio with their sound cards.&nbsp; The free version of AGWPE includes a 
-terminal program (for doing keyboard to keyboard packet), and is directly 
-supported by WinAPRS and many other ham radio programs.&nbsp; George also offers a 
-professional version, AGW Packet Engine Pro, which is not free but adds support 
+<a href="http://www.elcom.gr/sv2agw/inst.htm">AGW Packet Engine</a>, written by George Rossopoulos, SV2AGW, is free Windows
+software for sending and receiving 9600, 1200 and 300 baud UHF, VHF and HF
+packet.&nbsp;&nbsp; So far as I can tell, AGWPE is <i>the</i> defacto standard for hams
+doing packet radio with their sound cards.&nbsp; The free version of AGWPE includes a
+terminal program (for doing keyboard to keyboard packet), and is directly
+supported by WinAPRS and many other ham radio programs.&nbsp; George also offers a
+professional version, AGW Packet Engine Pro, which is not free but adds support
 for TCP/IP networking in addition to AX.25.</p>
 <p>Although
-<a href="http://www.winaprs.org/">WinAPRS</a> is not actually sound card software, I will mention it here because 
+<a href="http://www.winaprs.org/">WinAPRS</a> is not actually sound card software, I will mention it here because
 it can be used with the AGW Packet Engine to map and track APRS stations.&nbsp;</p>
-<p>You can use AGWPE for HF packet at 300 baud, this is rarely done any more.&nbsp; 
-The current standard for HF digital communications is PSK31, and there are 
-several PSK31 implementations for a PC and sound card.&nbsp; Just a few of the more 
+<p>You can use AGWPE for HF packet at 300 baud, this is rarely done any more.&nbsp;
+The current standard for HF digital communications is PSK31, and there are
+several PSK31 implementations for a PC and sound card.&nbsp; Just a few of the more
 popular programs are <a href="http://www.qsl.net/ae4jy/winpsk.htm">WinPSK</a>,
 <a href="http://www.nvbb.net/~jaffejim/digipan.htm">DigiPan</a>, and
-<a href="http://www.qsl.net/hamscope/">HamScope</a>.&nbsp; The latter program, 
+<a href="http://www.qsl.net/hamscope/">HamScope</a>.&nbsp; The latter program,
 HamScope, also decodes several other modes including RTTY and CW!</p>
 <p>SSTV (Slow Scan Televsion) is still alive on HF, and you can try out
 <a href="http://www.qsl.net/mmhamsoft/mmsstv/">MMSSTV</a> or
-<a href="http://homepage.ntlworld.com/winpix/">WinPix32</a> if you want to 
+<a href="http://homepage.ntlworld.com/winpix/">WinPix32</a> if you want to
 experience it for yourself.</p>
-<p>Finally, although it isnt exactly a Ham radio application, you can also use 
-your sound card interface to receive images from weather satellites.&nbsp; These 
-images are transmitted using facsimile (better known as FAX) and several 
+<p>Finally, although it isnt exactly a Ham radio application, you can also use
+your sound card interface to receive images from weather satellites.&nbsp; These
+images are transmitted using facsimile (better known as FAX) and several
 programs exist to decode them.&nbsp; You might want to try
-<a href="http://www.hffax.de/">HF-FAX</a> (which also decodes HF FAX and SSTV) 
+<a href="http://www.hffax.de/">HF-FAX</a> (which also decodes HF FAX and SSTV)
 or <a href="http://www.mscanmeteo.com/products.html">MeteoPro</a>.</p>
 
 <!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="arial, Arial, Helvetica"><!--msthemeseparator--><p align="center"><img src="_themes/tp-sho01/divider.gif" width="350" height="12"></p>
 <h3 align="center"><i>Visit these Spare Time Gizmos</i></h3>
 <p align="center"><font size="1"><a href="http://www.microsoft.com/frontpage/">
 <script language="JavaScript"><!--
-MSFPhover = 
-  (((navigator.appName == "Netscape") && 
-  (parseInt(navigator.appVersion) >= 3 )) || 
-  ((navigator.appName == "Microsoft Internet Explorer") && 
-  (parseInt(navigator.appVersion) >= 4 ))); 
-function MSFPpreload(img) 
+MSFPhover =
+  (((navigator.appName == "Netscape") &&
+  (parseInt(navigator.appVersion) >= 3 )) ||
+  ((navigator.appName == "Microsoft Internet Explorer") &&
+  (parseInt(navigator.appVersion) >= 4 )));
+function MSFPpreload(img)
 {
-  var a=new Image(); a.src=img; return a; 
+  var a=new Image(); a.src=img; return a;
 }
 // --></script><script language="JavaScript"><!--
 if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn.gif"); MSFPnav1h=MSFPpreload("_derived/AC_Monitor.htm_cmp_tp-sho01010_hbtn_a.gif"); }
@@ -179,7 +187,7 @@ if(MSFPhover) { MSFPnav15n=MSFPpreload("_derived/VT.htm_cmp_tp-sho01010_hbtn.gif
 <p align="center"><font size="1">
 <a href="http://groups.yahoo.com/group/sparetimegizmos/join">
 <img border="0" src="images/JoinYahoo.gif" align="left" alt="Click to join the Spare Time Gizmos Yahoo! Group." width="91" height="52"></a><a href="http://www.microsoft.com/frontpage/"><img border="0" src="images/Front_Page.gif" align="right" alt="[logo: created and managed with Microsoft Front Page 2000]" width="88" height="44"></a>Copyright  2000-2006 by Spare Time Gizmos.&nbsp; All rights reserved.&nbsp;
-Last modified 
+Last modified
 October 05, 2011.<br>
 Send mail to <a href="mailto:webmaster@sparetimegizmos.com">webmaster@sparetimegizmos.com</a>
 with questions or comments about this web site.</font></p>
