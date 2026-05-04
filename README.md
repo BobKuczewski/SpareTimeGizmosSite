@@ -10,4 +10,7 @@ Here's an image of the home page as it currently appears:
 
 ![SpareTimeGizmosSite Home Page](SpareTimeGizmosSite_GitHub.png)
 
-Note that there may still be many missing files. Please report any broken links to the [COSMAC ELF forum](https://groups.io/g/cosmacelf/topic/spare_time_gizmos_web_site/119082541).
+Note that there may still be many missing files. Please report any broken links to the [COSMAC ELF forum](https://groups.io/g/cosmacelf/topic/spare_time_gizmos_web_site/119082541). Also please post a report if you know where
+any of the following known missing files might be found:
+
+- Downloads/v60.zip
