@@ -1,3 +1,8 @@
 include:
-  - _underscore
+  - _derived
+  - _themes
+  - Hardware/_derived
+  - Hardware/_themes
+  - Software/_derived
+  - Software/_themes
   - "_*.html"
